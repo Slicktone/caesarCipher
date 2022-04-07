@@ -2,7 +2,7 @@ function caesarCipher (s, k) {
     //string s = cleartext
     //int k = alphabet rotation factor
 
-    let k = k % 26;
+    let n = k % 26;
     let message = ""
 
 
@@ -27,4 +27,7 @@ function caesarCipher (s, k) {
         char += 26;
     }
     }
+    message += String.fromCharCode(char - k)
+    
+    return message
 }
