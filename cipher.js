@@ -10,6 +10,13 @@ function caesarCipher (s, k) {
     for (let i = 0; i < String.length; i++) {
         // identify the ASCII code using charCodeAt
         let code = string.charCodeAt(i) + k
+        // handle for ASCII higher than 122
+        while (code > 122) {
+            code = (code - 122) + 96
+        }
+        // convert ASCII back to alphabet using fromCharCode
+        // after moving through the entire input, convert back to a string with .push
+        resultArray.push()
     }
 }
 
