@@ -1,23 +1,20 @@
+//string s = cleartext
+//int k = alphabet rotation factor (shift)
 function caesarCipher (s, k) {
-    //string s = cleartext
-    //int k = alphabet rotation factor (shift)
-
-    let n = k % 26;
-    let message = ""
-
 // try a for loop with an empty array
     let resultArray = []
-    for (let i = 0; i < String.length; i++) {
+    for (let i = 0; i < string.length; i++) {
         // identify the ASCII code using charCodeAt
-        let code = string.charCodeAt(i) + k
+        let cipher = string.charCodeAt(i) + k
         // handle for ASCII higher than 122
-        while (code > 122) {
-            code = (code - 122) + 96
+        while (cipher > 122) {
+            cipher = (cipher - 122) + 96
         }
         // convert ASCII back to alphabet using fromCharCode
         // after moving through the entire input, convert back to a string with .push
-        resultArray.push()
+        resultArray.push(String.fromCharCode(cipher))
     }
+    return resultArray.join('')
 }
 
     /*
